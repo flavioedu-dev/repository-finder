@@ -1,0 +1,8 @@
+.Footer{
+    position: fixed;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: .7;
+    font-size: 90%;
+}

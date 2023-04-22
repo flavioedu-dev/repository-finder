@@ -1,0 +1,20 @@
+.Home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Home h1{
+    margin-bottom: .5rem;
+}
+
+.Home form{
+    position: relative;
+}
+
+.not-user{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 1rem;
+}
