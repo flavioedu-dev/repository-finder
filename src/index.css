@@ -28,6 +28,23 @@ body{
   height: 100vh;
 }
 
+.Home, .Repos{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container{
+  text-align: center;
+  margin: 1rem 0;
+  padding: 2rem;
+  box-shadow: 1px 0px 7px 5px rgba(0,0,0,0.39);
+  border-radius: 10px;
+  border: 1px dashed #3a97d4;
+  min-width: 40vw;
+}
+
 input{
   padding: .8rem;
   border-radius: 3px;

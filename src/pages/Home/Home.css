@@ -1,9 +1,4 @@
-.Home{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+
 .Home h1{
     margin-bottom: .5rem;
 }
@@ -17,7 +12,7 @@
     text-align: center;
 }
 
-.Home section {
+/* .Home section {
     text-align: center;
     margin: 1rem 0;
     padding: 2rem;
@@ -25,7 +20,7 @@
     border-radius: 10px;
     border: 1px dashed #3a97d4;
     min-width: 40vw;
-}
+} */
 
 .Home section img{
     width: 40%;

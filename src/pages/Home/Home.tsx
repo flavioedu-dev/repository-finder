@@ -2,8 +2,8 @@
 import './Home.css'
 
 // Hooks
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { Link, useParams } from 'react-router-dom'
 
 interface Profile {
     name: string
@@ -14,19 +14,21 @@ interface Profile {
     avatar_url: string
     html_url: string
     message: string
+    repos_url: string
 }
-
 
 const Home = () => {
 
-    const [user, setUser] = useState<string>('')
+    const [userSearch, setUserSearch] = useState<string>('')
     const [profile, setProfile] = useState<Profile | null>()
 
-    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault()
-        
-        let res = await fetch(`https://api.github.com/users/${user}`).then(res => res.json())
-        .then((data: Profile) => data)
+    const { user } = useParams<string>()
+
+    const searchProfile = async (user: string) => {
+
+        let res = await fetch(`https://api.github.com/users/${user}`)
+            .then(res => res.json())
+            .then((data: Profile) => data)
 
         if(res.message === 'Not Found'){
             setProfile(null)
@@ -36,17 +38,27 @@ const Home = () => {
         setProfile(res)
     }
 
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault()
+
+        searchProfile(userSearch)
+    }
+
+    useEffect(() => {
+        if(user) searchProfile(user ? user : "") 
+    }, [user])
+
     return (
         <main className="Home">
             <h1>Buscar Perfil</h1>
             <form onSubmit={handleSubmit}>
-                <input type="text" name="user" placeholder='Nome de usuário' onChange={(e) => setUser(e.target.value)}/>
+                <input type="text" name="user" placeholder='Nome de usuário' onChange={(e) => setUserSearch(e.target.value)}/>
                 <button>Buscar</button>
-                {/* <button onClick={() => console.log(profile)}>Log</button> */}
+                <button onClick={() => console.log(profile?.repos_url)}>Log</button>
                 {profile === null && <p className='not-user'>Usuário não existe!</p>}
             </form>
             {profile && (
-            <section>
+            <section className="container">
                     <img src={profile.avatar_url} alt="profile-image" />
                     <h1>{profile.name}</h1>
                     <h2>{profile.location}</h2>
@@ -59,8 +71,8 @@ const Home = () => {
                         </div>
 
                         <div>
-                            <Link to={profile.html_url}>Github</Link>
-                            <Link to="/repos/:user">Repositórios</Link>
+                            <Link to={profile.html_url} target='_blank'>Github</Link>
+                            <Link to={`/repos/${userSearch || user}`}>Repositórios</Link>
                         </div>
                     </div>
             </section>
