@@ -13,8 +13,69 @@
 }
 
 .not-user{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     margin-top: 1rem;
+    text-align: center;
+}
+
+.Home section {
+    text-align: center;
+    margin: 1rem 0;
+    padding: 2rem;
+    box-shadow: 1px 0px 7px 5px rgba(0,0,0,0.39);
+    border-radius: 10px;
+    border: 1px dashed #3a97d4;
+    min-width: 40vw;
+}
+
+.Home section img{
+    width: 40%;
+    margin: 0 auto;
+}
+
+.Home section h1{
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+}
+
+.Home section h2{
+    opacity: .5;
+    font-size: 1rem;
+}
+
+.user-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3rem 0 0rem 0;
+}
+
+.user-info > div p span{
+    color: #3a97d4;
+}
+
+.user-info div:nth-child(1){
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.user-info div:nth-child(2){
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info div a{
+    background-color: #3a97d4;
+    margin: 5px 0;
+    padding: 1rem;
+    color: #000;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.user-info div a:hover, button:hover{
+    background-color: #3a7dd4;
 }
