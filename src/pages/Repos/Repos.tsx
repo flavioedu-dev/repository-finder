@@ -15,23 +15,27 @@ const Repos = () => {
 
   const navigate: NavigateFunction = useNavigate()
 
-  const [repos, setRepos] = useState<Repo[]>()
+  const [repos, setRepos] = useState<Repo[] | null>(null)
 
   const { user } = useParams<string>()
 
   const listRepos = async (user: string) => {
+    let res
     
-    let res = await fetch(`https://api.github.com/users/${user}/repos`)
+    try {
+      res = await fetch(`https://api.github.com/users/${user}/repos`)
       .then(res => res.json())
       .then((data: Repo[]) => data)
 
-    if(res[0].message === 'Not Found'){
+      if(res[0].message){
+        throw new Error()
+      }
+
+      setRepos(res)
+
+    } catch (error) {
       navigate("/")
     }
-
-    setRepos(res)
-
-    
   }
 
   useEffect(() => {
