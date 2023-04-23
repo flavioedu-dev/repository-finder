@@ -51,11 +51,13 @@ const Repos = () => {
         <button>Filtrar</button>
       </form>
       <section className="container">
-        <button onClick={() => console.log(repos)}>Repos</button>
         {repos && (
-          <>
-          {repos.map((repo) => <p key={repo.id}>{repo.name}</p>)}
-          </>
+          <ul className='repos-list'>
+          {repos.map((repo) => 
+            <li key={repo.id}>
+              {repo.name} <a href={repo.html_url} target="_blank">Link</a>
+            </li>)}
+          </ul>
         )
         }
       </section>
