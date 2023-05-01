@@ -16,10 +16,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Navigate to="/repository-finder" />} />
-      <Route path="/repository-finder" element={<Home />} />
-      <Route path="/repository-finder/:user" element={<Home />} />
-      <Route path="/repository-finder/repos/:user" element={<Repos />} />
+      <Route path="/" element={<Home />} />
+      <Route path="/:user" element={<Home />} />
+      <Route path="/repos/:user" element={<Repos />} />
     </Routes>
     <Footer />
     </BrowserRouter>

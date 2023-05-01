@@ -71,7 +71,7 @@ const Home = () => {
 
                         <div>
                             <Link to={profile.html_url} target='_blank'>Github</Link>
-                            <Link to={`/repository-finder/repos/${userSearch || user}`}>Repositórios</Link>
+                            <Link to={`/repos/${userSearch || user}`}>Repositórios</Link>
                         </div>
                     </div>
             </section>
