@@ -54,7 +54,6 @@ const Home = () => {
             <form onSubmit={handleSubmit}>
                 <input type="text" name="user" placeholder='Nome de usuário' onChange={(e) => setUserSearch(e.target.value)}/>
                 <button>Buscar</button>
-                <button onClick={() => console.log(profile?.repos_url)}>Log</button>
                 {profile === null && <p className='not-user'>Usuário não existe!</p>}
             </form>
             {profile && (
@@ -72,7 +71,7 @@ const Home = () => {
 
                         <div>
                             <Link to={profile.html_url} target='_blank'>Github</Link>
-                            <Link to={`/repos/${userSearch || user}`}>Repositórios</Link>
+                            <Link to={`/repository-finder/repos/${userSearch || user}`}>Repositórios</Link>
                         </div>
                     </div>
             </section>
