@@ -26,7 +26,7 @@ const Home = () => {
 
     const searchProfile = async (user: string) => {
 
-        let res = await fetch(`https://api.github.com/users/${user}`)
+        const res = await fetch(`https://api.github.com/users/${user}`)
             .then(res => res.json())
             .then((data: Profile) => data)
 
