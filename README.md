@@ -2,7 +2,7 @@
 > You can search github repositories and filter your search.
 
 ## About the project
-Github repository finder developed with ReactJS library and using github API as data source.
+Github repository finder developed with ReactJS library in Typescript and using github API as data source.
 
 <b>Acess in: https://xflax00-repository-finder.netlify.app/</b>
 
