@@ -1,70 +1,93 @@
-.Repos .container{
-    min-height: 77vh
+.Repos .container {
+  min-height: 77vh;
 }
 
-.Repos h1{
-    text-align: center;
-    margin-bottom: .5rem;
+.Repos h1 {
+  text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.back-btn{
-    position: absolute;
-    top: 3rem;
-    left: 5rem;
+.back-btn {
+  position: absolute;
+  top: 3rem;
+  left: 5rem;
 }
 
-.Repos > a{
-    background-color: #3a97d4;
-    margin: 5px 0;
-    padding: .8rem 2rem;
-    color: #000;
-    text-decoration: none;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: .9rem;
+.Repos > a {
+  background-color: #3a97d4;
+  margin: 5px 0;
+  padding: 0.8rem 2rem;
+  color: #000;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
-.Repos > a:hover{
-    background-color: #3a7dd4;
+.Repos > a:hover {
+  background-color: #3a7dd4;
 }
 
-.repos-list{
-    list-style-type: none;
-    max-height: 70vh;
-    padding: 2rem 3rem;
-    overflow: auto;
+.repos-list {
+  list-style-type: none;
+  max-height: 70vh;
+  padding: 2rem 3rem;
+  overflow: auto;
 }
 
-.repos-list li{
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: .8rem;
+.repos-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
 }
 
-.repos-list li a{
-    background-color: #3a97d4;
-    color: #000;
-    border-radius: 10px;
-    font-weight: 600;
-    padding: .4rem .6rem;
-    font-size: .9rem;
-    cursor: pointer;
-    text-decoration: none;
+.repos-list li a {
+  background-color: #3a97d4;
+  color: #000;
+  border-radius: 10px;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-.repos-list li a:hover{
-    background-color: #3a7dd4;
+.repos-list li a:hover {
+  background-color: #3a7dd4;
 }
 
 .repos-list::-webkit-scrollbar {
-    width: 20px;             
+  width: 20px;
 }
 
 .repos-list::-webkit-scrollbar-track {
-    background: #151e3a;
+  background: #151e3a;
 }
 
-
 .repos-list::-webkit-scrollbar-thumb {
-    background-color: #3a97d4;
+  background-color: #3a97d4;
+}
+
+@media (max-width: 500px) {
+  .Repos .container {
+    max-width: 90%;
+  }
+
+  .Repos .repos-list {
+    padding: 0;
+    padding-right: 10px;
+  }
+
+  .Repos .repos-list li {
+    align-items: center;
+  }
+
+  .Repos .back-btn{
+    left: 15px;
+    top: 25px;
+  }
+
+  .Repos > a{
+    padding: 10px 1rem;
+  }
 }

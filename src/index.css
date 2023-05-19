@@ -67,9 +67,3 @@ button{
 button:hover{
   background-color: var(--secondary-color);
 }
-
-@media (max-width: 500px){
-  .Home .container{
-    
-  }
-}
