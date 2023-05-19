@@ -4,7 +4,7 @@
 ## About the project
 Github repository finder developed with ReactJS library in Typescript and using github API as data source.
 
-<b>Acess in: https://xflax00-repository-finder.netlify.app/</b>
+<b>Acess in: https://xflax00.github.io/repository-finder/</b>
 
 ## Instructions
 
