@@ -61,7 +61,7 @@ const Repos = () => {
   
   return (
     <main className="Repos">
-      <Link to={`/${user}`} className="back-btn">Voltar</Link>
+      <Link to={`/repository-finder/${user}`} className="back-btn">Voltar</Link>
       <h1>Repositórios</h1>
       <form onSubmit={handleFilter}>
         <input type="text" name="filter" placeholder="Nome do repositório" onChange={(e) => setFilter(e.target.value)}/>
