@@ -4,7 +4,7 @@
 ## About the project
 Github repository finder developed with ReactJS library in Typescript and using github API as data source.
 
-<b>Acess in: https://xflax00.github.io/repository-finder/</b>
+<b>Acess in: [Repository Finder](https://flavioedu-dev.github.io/repository-finder/)</b>
 
 ## Instructions
 
